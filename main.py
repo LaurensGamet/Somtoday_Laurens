@@ -1,19 +1,31 @@
 import requests
 import os
+import shutil
 
+# Give needed files simpler names
 file1 = '4fc988ad-6d4d-4c2a-aaf0-8207665bf69b.ics'
+file2 = 'Final-File.ics'
 
+# Makes sure no duplicate files
 if os.path.exists(file1):
   os.remove(file1)
 else:
   print("The file does not exist")
 
+if os.path.exists(file2):
+  os.remove(file2)
+else:
+  print("The file does not exist")
+
+# Gets original file
 url = 'https://elo.somtoday.nl/services/webdav/calendarfeed/58405be0-5611-4aba-be66-9894a1009f12/4fc988ad-6d4d-4c2a-aaf0-8207665bf69b'
 r = requests.get(url, allow_redirects=True)
 open(file1, 'wb').write(r.content)
 
 with open(file1, 'r') as file:
   filedata = file.read()
+
+# Replaces text in original file
 
 # Aardrijkskunde
 filedata = filedata.replace('oga3cak', 'Aardrijkskunde')
@@ -929,3 +941,6 @@ filedata = filedata.replace("SUMMARY:tm227 - ", 'SUMMARY:')
 
 with open(file1, 'w') as file:
     file.write(filedata)
+
+# Create final file
+shutil.copyfile(file1, file2)
