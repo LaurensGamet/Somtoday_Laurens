@@ -2,7 +2,7 @@
 current_datetime=$(date +"%H%M%d%m%Y")
 
 # Get up to date
-git pull 
+git pull -q
 
 # Run main file
 sudo python3 main.py
