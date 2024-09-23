@@ -2,13 +2,13 @@
 current_datetime=$(date +"%H%M%d%m%Y")
 
 # Get in right directory
-cd /home/laurens/SomtodayAgenda
+cd /home/laurens/Somtoday_Laurens
 
 # Get up to date
 sudo git pull -q
 
 # Run main file
-sudo python3 /home/laurens/SomtodayAgenda/main.py
+sudo python3 /home/laurens/Somtoday_Laurens/main.py
 
 # Upload to Github
 sudo git add -A
