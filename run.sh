@@ -1,16 +1,22 @@
 #!/bin/bash
 current_datetime=$(date +"%H%M%d%m%Y")
 
-# Get in right directory
+echo "# Get in right directory"
 cd /home/laurens/Somtoday_Laurens
 
-# Get up to date
+echo
+
+echo "# Get up to date"
 sudo git pull
 
-# Run main file
+echo
+
+echo "# Run main file"
 sudo python3 /home/laurens/Somtoday_Laurens/main.py
 
-# Upload to Github
+echo
+
+echo "# Upload to Github"
 sudo git add -A
 sudo git commit -m "$current_datetime"
 sudo git push
