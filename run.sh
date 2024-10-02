@@ -5,13 +5,13 @@ current_datetime=$(date +"%H%M%d%m%Y")
 cd /home/laurens/Somtoday_Laurens
 
 # Get up to date
-sudo git pull -q
+sudo git pull
 
 # Run main file
 sudo python3 /home/laurens/Somtoday_Laurens/main.py
 
 # Upload to Github
 sudo git add -A
-sudo git commit -q -m "$current_datetime"
-sudo git push -q
+sudo git commit -m "$current_datetime"
+sudo git push
 
