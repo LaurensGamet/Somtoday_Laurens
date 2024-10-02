@@ -1,7 +1,7 @@
 #!/bin/bash
 current_datetime=$(date +"%H%M%d%m%Y")
 
-echo $(date + "%H"":""%M"" ""%d""-""%m""-""%Y")
+echo $(date +"%H"":""%M"" ""%d""-""%m""-""%Y")
 echo
 echo "# Get in right directory"
 cd /home/laurens/Somtoday_Laurens
@@ -23,6 +23,6 @@ sudo git add -A
 sudo git commit -m "$current_datetime"
 sudo git push
 
-echo
-echo
+echo  
+echo  
 
