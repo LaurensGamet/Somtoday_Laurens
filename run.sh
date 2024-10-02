@@ -6,10 +6,6 @@ echo
 echo "# Get in right directory"
 cd /home/laurens/Somtoday_Laurens
 
-# Just to be sure it works
-cd .git
-rm -f index.lock
-
 echo
 
 echo "# Get up to date"
