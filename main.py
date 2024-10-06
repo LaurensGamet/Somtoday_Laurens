@@ -63,6 +63,12 @@ filedata = filedata.replace('oga3cen', 'Engels')
 with open(file1, 'w') as file:
   file.write(filedata)
 
+# Studiedag
+filedata = filedata.replace('studiedag', '')
+
+with open(file1, 'w') as file:
+  file.write(filedata)
+  
 # Frans
 filedata = filedata.replace('oga3cfa', 'Frans')
 
