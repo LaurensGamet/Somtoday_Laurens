@@ -177,6 +177,17 @@ filedata = filedata.replace('oga3csk', 'Scheikunde')
 with open(file2, 'w') as file:
   file.write(filedata)
 
+# Taal, Maatschappij en Cultuur
+filedata = filedata.replace('oga3.tmc1\, oh3.tmc1', 'TMC')
+
+with open(file2, 'w') as file:
+  file.write(filedata)
+
+filedata = filedata.replace('oh3.tmc1\, oga3.tmc1', 'TMC')
+
+with open(file2, 'w') as file:
+  file.write(filedata)
+
 # Wiskunde
 filedata = filedata.replace('oga3cwi', 'Wiskunde')
 
