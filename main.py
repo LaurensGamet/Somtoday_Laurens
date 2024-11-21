@@ -3,8 +3,7 @@ import os
 import shutil
 
 # Give simpler names
-agendanaam = '4fc988ad-6d4d-4c2a-aaf0-8207665bf69b'
-file1 = f'{agendanaam}.ics'
+file1 = '4fc988ad-6d4d-4c2a-aaf0-8207665bf69b.ics'
 file2 = 'Final-File.ics'
 file3 = 'out.py'
 klas = 'oga3c'
@@ -21,7 +20,7 @@ else:
   print("The file does not exist")
 
 # Gets original file
-url = f'https://elo.somtoday.nl/services/webdav/calendarfeed/58405be0-5611-4aba-be66-9894a1009f12/{agendanaam}'
+url = 'https://elo.somtoday.nl/services/webdav/calendarfeed/58405be0-5611-4aba-be66-9894a1009f12/4fc988ad-6d4d-4c2a-aaf0-8207665bf69b'
 r = requests.get(url, allow_redirects=True)
 open(file1, 'wb').write(r.content)
 
@@ -167,4 +166,3 @@ if os.path.exists(file1):
   os.remove(file1)
 else:
   print("The file does not exist")
-
