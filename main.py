@@ -5,17 +5,11 @@ import shutil
 # Give simpler names
 file1 = '4fc988ad-6d4d-4c2a-aaf0-8207665bf69b.ics'
 file2 = 'Final-File.ics'
-file3 = 'out.py'
 klas = 'oga3c'
 
 # Makes sure no duplicate files
 if os.path.exists(file2):
   os.remove(file2)
-else:
-  print("The file does not exist")
-
-if os.path.exists(file3):
-  os.remove(file3)
 else:
   print("The file does not exist")
 
@@ -29,10 +23,6 @@ with open(file1, 'r') as file:
 
 # Makes Final-File.ics from original
 shutil.copyfile(file1, file2)
-
-# Makes out.py to get rid of error
-with open('out.py', 'w') as fp:
-    pass
 
 # Replaces text in original file
 
@@ -93,6 +83,7 @@ subject_replacements = {
     f'{klas}wi': 'Wiskunde',
     f'oga3.tmc1, oh3.tmc1': 'TMC',
     f'oh3.tmc1, oga3.tmc1': 'TMC',
+    f'oh3.tmc1\, oga3.tmc1' : 'TMC'
 }
 
 # Perform all replacements
