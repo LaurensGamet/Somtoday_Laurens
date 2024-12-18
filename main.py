@@ -123,7 +123,9 @@ specific_replacements = [
     "SUMMARY:tm146_o&o - ",
     "SUMMARY:cb012_gym - ",
     "SUMMARY:tm116_binask\, tm115_binask - ",
-    "SUMMARY:tm034\, tm035 - "
+    "SUMMARY:tm034\, tm035 - ",
+    "SUMMARY:tm208\, tm214\, tm137\, tm215",
+    "SUMMARY:tm208\, tm137\, tm214\, tm215",,
 ]
 
 # Perform specific replacements
